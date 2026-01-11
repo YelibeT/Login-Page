@@ -3,10 +3,9 @@ import { Link } from "react-router-dom"
 import axios from 'axios'
 
 function SignUp() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState ("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,8 +48,6 @@ function SignUp() {
         Already have an account? <Link to="/login">Login</Link>
       </p>
       </form>
-
-      {message && <p className="message">{message}</p>}
     </div>
   );
 }
