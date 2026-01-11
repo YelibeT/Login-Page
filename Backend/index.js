@@ -1,0 +1,1 @@
+const MONGO_URI="mongodb+srv://yelibetsedeke822_db_user:<db_password>@cluster0.rroddbu.mongodb.net/?appName=Cluster0"
