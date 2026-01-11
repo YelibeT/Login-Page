@@ -1,1 +1,13 @@
-const MONGO_URI="mongodb+srv://yelibetsedeke822_db_user:<db_password>@cluster0.rroddbu.mongodb.net/?appName=Cluster0"
+const express=require("express")
+const mongoose=require('mongoose')
+const cors=require('cors')
+
+const app=express()
+app.use(express.json())
+app.use(cors())
+
+mongoose.connect('mongodb://localhost:27017/employee')
+
+app.listen(3001,()=>{
+    console.log("server is running")
+})
