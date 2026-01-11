@@ -1,6 +1,4 @@
-import React from "react";
 import { useState } from "react";
-import SignUp from './signup';
 import './index.css'
 import { Link } from "react-router-dom";
 
@@ -16,7 +14,7 @@ export default function Login() {
   
     return (
       <div className="container">
-        <h2>SignUp</h2>
+        <h2>Login</h2>
   
         <form onSubmit={handleSubmit}>
           <input
