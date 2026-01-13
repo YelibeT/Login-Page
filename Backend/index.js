@@ -2,11 +2,12 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import EmployeeModel from "./models/Employee.js";
+import router from "./routes/auth.js";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-
+app.use("./routes/auth.js", router);
 
 mongoose.connect("mongodb://localhost:27017/employee")
     .then(() => console.log("MongoDB connected"))
@@ -21,11 +22,9 @@ app.post("/register", async (req, res) => {
   }
 });
 
-
 app.get("/", (req, res) => {
   res.send("Server is running");
 });
-
 
 const PORT = 3001;
 app.listen(PORT, () => {

@@ -1,4 +1,3 @@
-// models/Employee.js
 import mongoose from "mongoose";
 
 const EmployeeSchema = new mongoose.Schema({
